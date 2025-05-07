@@ -68,17 +68,17 @@ def evaluate_test_texts(model, df_test, tag2idx, idx2tag, batch_size = 1):
 
 
 if __name__ == "__main__":
-    input_csv_file_name = "bilstmcrf_pytorch/lung_rads_data/lung_rads_test.csv"
-    output_csv_file_name = "biobertpt/lung_rads/lung_rads_test_predicted.csv"
+    input_csv_file_name = "bilstmcrf_pytorch/data/lung_rads/lung_rads_test.csv"
+    output_csv_file_name = "biobertpt/data/lung_rads/lung_rads_test_predicted.csv"
     # Load Test Data
-    dev_df = load_data("biobertpt/lung_rads/df_test_tokens_labeled_iob_bert_format.csv")
+    dev_df = load_data("biobertpt/data/df_test_tokens_labeled_iob_bert_format.csv")
     df_total = load_data("biobertpt/data/df_tokens_labeled_iob_bert_format.csv")
 
     tag2idx, idx2tag , unseen_label, unique_tags = tags_mapping_v2(df_total["tags"])
 
     # Load Model
     model = BioBERTptNER(13) # unique tags length == 13 labels
-    model.load_state_dict(torch.load("biobertpt/models/split_1/model_lr=3e-05_batch_size=4.pth"))
+    model.load_state_dict(torch.load("biobertpt/models/model_lr=3e-05_batch_size=4.pth"))
     model.eval()
 
     labels_dev, labels_pred = evaluate_test_texts(model, dev_df, tag2idx, idx2tag)
