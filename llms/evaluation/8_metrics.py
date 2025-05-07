@@ -69,12 +69,12 @@ if __name__=='__main__':
     df_test = pd.read_csv("llms/doc_similarity/data/test_post_processed.csv")
 
     # Zero shot
-    #df_result = pd.read_csv("data/one_lung_nodule/zero_shot/results_gemini/results_prompt_2_structured_post_processing_v2.csv")
-    #csv_filename = "data/one_lung_nodule/zero_shot/results_gemini/metrics_prompt_2_structured_v2.csv"
+    # df_result = pd.read_csv("llms/zero_shot/data/gemini_results/results_prompt_1_structured_post_processed.csv")
+    # csv_filename = "llms/zero_shot/data/gemini_results/metrics_prompt_1_structured_post_processed.csv"
 
     # Few shot
-    df_result = pd.read_csv("llms/few_shot/data/llama_results/results_prompt_1_ten_ex_structured_post_processed.csv")
-    csv_filename = "llms/few_shot/data/llama_results/metrics_results_prompt_1_ten_ex_structured_post_processed.csv"
+    df_result = pd.read_csv("llms/few_shot/data/llama_results/results_prompt_1_five_ex_structured_post_processed.csv")
+    csv_filename = "llms/few_shot/data/llama_results/metrics_results_prompt_1_five_ex_structured_post_processed.csv"
 
     metrics = calculate_metrics(df_test, df_result, columns)
     results = calculate_precision_recall_f1(metrics)

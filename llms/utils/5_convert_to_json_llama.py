@@ -1,11 +1,11 @@
 import json
 import re
 
-# input_filename = "llms/zero_shot/data/llama_results/results_prompt_2.txt"
-# output_filename = "llms/zero_shot/data/llama_results/results_prompt_2.jsonl"
+input_filename = "llms/zero_shot/data/llama_results/results_prompt_2.txt"
+output_filename = "llms/zero_shot/data/llama_results/results_prompt_2.jsonl"
 
-input_filename = "llms/few_shot/data/llama_results/results_prompt_2_five_ex.txt"
-output_filename = "llms/few_shot/data/llama_results/results_prompt_2_five_ex.jsonl"
+# input_filename = "llms/few_shot/data/llama_results/results_prompt_2_five_ex.txt"
+# output_filename = "llms/few_shot/data/llama_results/results_prompt_2_five_ex.jsonl"
 
 with open(input_filename, "r", encoding="utf-8") as infile, \
     open(output_filename, "w", encoding="utf-8") as outfile:

@@ -12,5 +12,5 @@ def extract_json_tables(file_path, output_file):
             out_file.write(match + '\n\n')
 
 # Example usage
-#extract_json_tables("llms/zero_shot/data/llama_results/results_prompt_2.txt", "llms/zero_shot/data/llama_results/results_prompt_2_post_processed.txt")
-extract_json_tables("llms/few_shot/data/llama_results/results_prompt_1_five_ex.txt", "llms/few_shot/data/llama_results/results_prompt_1_five_ex_post_processed.txt")
+#extract_json_tables("llms/zero_shot/data/llama_results/results_prompt_1.txt", "llms/zero_shot/data/llama_results/results_prompt_1_post_processed.txt")
+#extract_json_tables("llms/few_shot/data/llama_results/results_prompt_1_five_ex.txt", "llms/few_shot/data/llama_results/results_prompt_1_five_ex_post_processed.txt")

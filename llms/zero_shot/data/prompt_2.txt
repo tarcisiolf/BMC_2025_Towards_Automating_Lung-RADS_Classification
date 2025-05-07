@@ -1,6 +1,7 @@
 Por favor extraia informações estruturadas relevantes do laudo acima:
 "Questão" : "Resposta"
 {
+"Id do laudo": "",
 "O nódulo é sólido ou em partes moles?" : "",
 "O nódulo tem densidade semissólida ou parcialmente sólida?" : "",
 "O nódulo é em vidro fosco?" : "",

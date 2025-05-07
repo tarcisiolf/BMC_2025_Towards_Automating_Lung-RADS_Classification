@@ -97,8 +97,8 @@ if __name__ == '__main__':
     # input_filename = "llms/zero_shot/data/gpt_results/results_prompt_1.jsonl"
     # output_filename = "llms/zero_shot/data/gpt_results/results_prompt_1_structured.csv"
 
-    # input_filename = "llms/zero_shot/data/llama_results/results_prompt_2.jsonl"
-    # output_filename = "llms/zero_shot/data/llama_results/results_prompt_2_structured.csv"
+    #input_filename = "llms/zero_shot/data/llama_results/results_prompt_1.jsonl"
+    #output_filename = "llms/zero_shot/data/llama_results/results_prompt_1_structured.csv"
     # Few Shot
     # input_filename = "llms/few_shot/data/gemini_results/results_prompt_2_five_ex.jsonl"
     # output_filename = "llms/few_shot/data/gemini_results/results_prompt_2_five_ex_structured.csv"

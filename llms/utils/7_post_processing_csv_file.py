@@ -94,12 +94,25 @@ def converted_size(df):
 
 if __name__ == '__main__':
     #Zero Shot
-    #input_filename = "llms/zero_shot/data/llama_results/results_prompt_2_structured.csv"
-    #output_filename = "llms/zero_shot/data/llama_results/results_prompt_2_structured_post_processed.csv"
+    # input_filename = "llms/zero_shot/data/gpt_results/results_prompt_2_structured.csv"
+    # output_filename = "llms/zero_shot/data/gpt_results/results_prompt_2_structured_post_processed.csv"
 
-    # Few
-    input_filename = "llms/few_shot/data/llama_results/results_prompt_1_five_ex_structured.csv"
-    output_filename = "llms/few_shot/data/llama_results/results_prompt_1_five_ex_structured_post_processed.csv"
+    # Few Shot
+    # input_filename = "llms/few_shot/data/llama_results/results_prompt_2_five_ex_structured.csv"
+    # output_filename = "llms/few_shot/data/llama_results/results_prompt_2_five_ex_structured_post_processed.csv"
+
+    # df = read_csv(input_filename)
+    # df = string_to_bool(df)
+    # df = structured_location(df)
+    # df = structured_size(df)
+    # df = converted_size(df)
+    # df = df.rename(columns={"Tamanho do nódulo": "Tamanho do nódulo (mm)"})
+    # #df.drop(['Texto', 'O nódulo tem borda lisa e/ou bem definida?', 'Tamanho em mm','Lung-RADS','LR Radiologista','Justapleural'], axis=1, inplace=True)
+    # df.to_csv(output_filename, index=False)
+
+    # Test data
+    input_filename = "llms/doc_similarity/data/test.csv"
+    output_filename = "llms/doc_similarity/data/test_post_processed.csv"
 
     df = read_csv(input_filename)
     df = string_to_bool(df)
@@ -107,7 +120,6 @@ if __name__ == '__main__':
     df = structured_size(df)
     df = converted_size(df)
     df = df.rename(columns={"Tamanho do nódulo": "Tamanho do nódulo (mm)"})
-    #df.drop(['Texto', 'O nódulo tem borda lisa e/ou bem definida?', 'Tamanho em mm','Lung-RADS','LR Radiologista','Justapleural'], axis=1, inplace=True)
+    df.drop(['Texto', 'O nódulo tem borda lisa e/ou bem definida?', 'Tamanho em mm','Lung-RADS','LR Radiologista','Justapleural'], axis=1, inplace=True)
     df.to_csv(output_filename, index=False)
-
     
