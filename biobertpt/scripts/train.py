@@ -158,7 +158,7 @@ with torch.no_grad():
     metric_file_name = metrics_folder + f'classification_report_lr={lr}_batch_size={batch_size}.json'
 
     with open(metric_file_name, "w") as f:
-        json.dump(train_results, f, indent=4)
+        json.dump(dev_results, f, indent=4)
 
     print(f"VALIDATION \nLoss {total_loss_dev / len(dev_dataset)} \nMetrics{dev_results}\n" )
 
